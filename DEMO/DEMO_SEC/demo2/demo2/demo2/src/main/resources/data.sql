@@ -1,0 +1,2 @@
+INSERT INTO person (username, passwd, firstname, lastname,role) VALUES ('stmallaun@tsn.at', '$2a$10$xRTXvpMWly0oGiu65WZlm.3YL95LGVV2ASFjDhe6WF4.Qji1huIPa', 'Stefan', 'Mallaun', 'ROLE_ADMIN');
+INSERT INTO person (username, passwd, firstname, lastname,role) VALUES ('mallaunstefan@gmail.com', '$2a$10$xRTXvpMWly0oGiu65WZlm.3YL95LGVV2ASFjDhe6WF4.Qji1huIPa', 'Stefan', 'Mallaun', 'ROLE_ADMIN');

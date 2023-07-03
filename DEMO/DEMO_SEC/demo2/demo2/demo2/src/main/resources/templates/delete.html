@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap settings -->
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/5.1.3/css/bootstrap.min.css}">
+    <!-- Popper.js -->
+    <script th:src="@{/webjars/popper.js/2.9.3/umd/popper.min.js}"></script>
+
+    <title>Löschung</title>
+    
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        
+        .container {
+            margin-top: 50px;
+        }
+        
+        .page-header {
+            margin-bottom: 30px;
+        }
+        
+        .table {
+            background-color: #ffffff;
+        }
+        
+        .table th {
+            background-color: #f8f9fa;
+            font-weight: bold;
+            vertical-align: middle;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-control {
+            border-radius: 5px;
+        }
+        
+        .text-danger {
+            color: #dc3545;
+            font-size: 12px;
+            margin-top: 5px;
+        }
+        
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+            font-size: 16px;
+            padding: 8px 16px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-6">
+                <div class="page-header">
+                    <h1 class="display-4">Löschen</h1>
+                </div>
+                <form method="post" th:action="@{/delete}" th:object="${deleteForm}">
+                    <table class="table table-bordered table-hover">
+                        <!-- User ID input area -->
+                        <tr>
+                            <th class="col-sm-3">Username</th>
+                            <td>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" th:field="*{username}" />
+                                    <span class="text-danger" th:if="${#fields.hasErrors('username')}" th:errors="*{username}"></span>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                    <!-- User registration button -->
+                    <button class="btn btn-primary" type="submit">Löschen</button>
+                </form>
+                <a href="home" class="link-primary">Go to Main</a>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
